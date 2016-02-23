@@ -29,6 +29,7 @@ LOCAL_SHARED_LIBRARIES := \
 
 LOCAL_MULTILIB := 32
 
+LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter
 #LOCAL_CFLAGS += -O0 -g
 
 LOCAL_MODULE := libbluetooth_jni

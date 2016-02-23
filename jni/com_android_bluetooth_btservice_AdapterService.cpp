@@ -287,7 +287,6 @@ static void device_found_callback(int num_properties, bt_property_t *properties)
 static void bond_state_changed_callback(bt_status_t status, bt_bdaddr_t *bd_addr,
                                         bt_bond_state_t state) {
     jbyteArray addr;
-    int i;
     if (!checkCallbackThread()) {
        ALOGE("Callback: '%s' is not called on the correct thread", __FUNCTION__);
        return;
@@ -313,7 +312,6 @@ static void acl_state_changed_callback(bt_status_t status, bt_bdaddr_t *bd_addr,
                                        bt_acl_state_t state)
 {
     jbyteArray addr;
-    int i;
     if (!checkCallbackThread()) {
        ALOGE("Callback: '%s' is not called on the correct thread", __FUNCTION__);
        return;
@@ -336,7 +334,6 @@ static void acl_state_changed_callback(bt_status_t status, bt_bdaddr_t *bd_addr,
 }
 
 static void discovery_state_changed_callback(bt_discovery_state_t state) {
-    jbyteArray addr;
     if (!checkCallbackThread()) {
        ALOGE("Callback: '%s' is not called on the correct thread", __FUNCTION__);
        return;
